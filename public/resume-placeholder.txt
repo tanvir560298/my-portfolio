@@ -1,0 +1,3 @@
+[RESUME FILE]
+
+Replace this file with your real PDF at public/resume.pdf, then update src/data/content.ts.
