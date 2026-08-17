@@ -1,6 +1,6 @@
 import { useState, type ReactNode } from 'react'
 import { Menu, X } from 'lucide-react'
-import { Outlet } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 import { navItems, personal } from '../data/content'
 import { Container } from './ui'
 
@@ -28,15 +28,26 @@ export function Layout({ children }: { children?: ReactNode }) {
             <span className="hidden sm:block">{personal.name}</span>
           </a>
           <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary navigation">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="rounded-lg px-3 py-2 text-sm font-medium text-slate-300 transition hover:bg-white/5 hover:text-white"
-              >
-                {item.label}
-              </a>
-            ))}
+            {navItems.map((item) => {
+              const isHash = item.href.startsWith('/#') || item.href.startsWith('#')
+              return isHash ? (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className="rounded-lg px-3 py-2 text-sm font-medium text-slate-300 transition hover:bg-white/5 hover:text-white"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  className="rounded-lg px-3 py-2 text-sm font-medium text-slate-300 transition hover:bg-white/5 hover:text-white"
+                >
+                  {item.label}
+                </Link>
+              )
+            })}
           </nav>
           <button
             type="button"
@@ -55,16 +66,28 @@ export function Layout({ children }: { children?: ReactNode }) {
             className="border-t border-white/10 bg-slate-950 px-5 py-4 lg:hidden"
             aria-label="Mobile navigation"
           >
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                onClick={() => setOpen(false)}
-                className="block rounded-lg px-3 py-3 font-medium text-slate-200 hover:bg-white/5"
-              >
-                {item.label}
-              </a>
-            ))}
+            {navItems.map((item) => {
+              const isHash = item.href.startsWith('/#') || item.href.startsWith('#')
+              return isHash ? (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className="block rounded-lg px-3 py-3 font-medium text-slate-200 hover:bg-white/5"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  onClick={() => setOpen(false)}
+                  className="block rounded-lg px-3 py-3 font-medium text-slate-200 hover:bg-white/5"
+                >
+                  {item.label}
+                </Link>
+              )
+            })}
           </nav>
         )}
       </header>

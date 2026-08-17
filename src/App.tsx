@@ -6,6 +6,7 @@ import { NotFound } from './pages/NotFound'
 import { ProjectCaseStudy } from './pages/ProjectCaseStudy'
 import { ResourceDetail } from './pages/ResourceDetail'
 import { Resources } from './pages/Resources'
+import { Hub } from './pages/Hub'
 import { personal, seo } from './data/content'
 
 function ScrollManager() {
@@ -46,6 +47,7 @@ export default function App() {
           <Route path="/projects/:slug" element={<ProjectCaseStudy />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/resources/:slug" element={<ResourceDetail />} />
+          <Route path="/hub" element={<Hub />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

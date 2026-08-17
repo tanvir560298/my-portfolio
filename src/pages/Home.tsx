@@ -17,7 +17,6 @@ import {
   personal,
   projects,
   resources,
-  roadmap,
   services,
   skills,
   testimonials,
@@ -25,6 +24,7 @@ import {
 } from '../data/content'
 import type { ProjectCategory } from '../types'
 import { ActionLink, Badge, Button, Card, Container, Section } from '../components/ui'
+import { RoadmapSolarSystem } from '../components/roadmap/RoadmapSolarSystem'
 
 const contactSchema = z.object({
   name: z.string().trim().min(2, 'Please enter at least 2 characters.'),
@@ -209,37 +209,10 @@ export function Home() {
       <Section
         id="teaching"
         eyebrow="Teaching"
-        title="A practical MERN learning roadmap."
-        intro="A staged path from web fundamentals to deployable full-stack projects."
+        title="Preparing practical web development lessons for YouTube."
+        intro="I plan to help beginners learn step by step, build practical projects, and follow a clear path from web fundamentals to full-stack React and Java/Spring Boot."
       >
-        <ol className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {roadmap.map((stage, index) => (
-            <li key={stage.title}>
-              <Card className="h-full">
-                <div className="flex items-center gap-3">
-                  <span className="grid h-9 w-9 place-items-center rounded-full bg-emerald-400 font-black text-slate-950">
-                    {index + 1}
-                  </span>
-                  <h3 className="text-lg font-bold text-white">{stage.title}</h3>
-                </div>
-                <p className="mt-4 text-sm leading-6 text-slate-300">{stage.description}</p>
-                <details className="mt-5 rounded-xl border border-white/10 bg-slate-950/40 p-4">
-                  <summary className="cursor-pointer font-semibold text-emerald-300">
-                    Topics covered
-                  </summary>
-                  <ul className="mt-3 space-y-2 text-sm text-slate-300">
-                    {stage.topics.map((topic) => (
-                      <li key={topic} className="flex gap-2">
-                        <span className="text-emerald-400">•</span>
-                        {topic}
-                      </li>
-                    ))}
-                  </ul>
-                </details>
-              </Card>
-            </li>
-          ))}
-        </ol>
+        <RoadmapSolarSystem />
       </Section>
 
       <Section
@@ -317,7 +290,9 @@ export function Home() {
       >
         <Card className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
           <div>
-            <h3 className="text-xl font-bold text-white">Developer & instructor profile</h3>
+            <h3 className="text-xl font-bold text-white">
+              Developer & aspiring educator profile
+            </h3>
             <p className="mt-2 text-slate-300">
               Download the current placeholder resume, then replace it when your final details are
               ready.

@@ -23,6 +23,13 @@ export interface Project {
   featured: boolean
 }
 
+export interface Video {
+  title: string
+  youtubeId: string
+  duration?: string
+  description?: string
+}
+
 export interface Resource {
   slug: string
   title: string
@@ -34,7 +41,9 @@ export interface Resource {
   content: string[]
   featured: boolean
   status: 'Planned Content' | 'Published'
+  videos?: Video[]
 }
+
 
 export interface SkillGroup {
   category: string
@@ -66,3 +75,62 @@ export interface Testimonial {
   relationship: string
   sourceUrl?: string
 }
+
+export interface Course {
+  id: string
+  title: string
+  studentsCount: number
+  lessonsCount: number
+  description: string
+  modules: string[]
+}
+
+export interface UpcomingClass {
+  id: string
+  title: string
+  date: string
+  time: string
+  topic: string
+  zoomPlaceholder: string
+}
+
+export interface ClassroomCodeSnippet {
+  id: string
+  title: string
+  description: string
+  language: string
+  code: string
+}
+
+export interface StudentQuestion {
+  id: string
+  studentName: string
+  date: string
+  question: string
+  answer: string
+  category: string
+}
+
+export interface DSAProblem {
+  id: string
+  title: string
+  difficulty: 'Easy' | 'Medium' | 'Hard'
+  tags: string[]
+  problemUrl?: string
+  description: string
+  solutionCode: string
+  explanation: string
+  complexity: {
+    time: string
+    space: string
+  }
+}
+
+export interface SystemDesignNote {
+  id: string
+  title: string
+  description: string
+  details: string[]
+  keyTakeaways: string[]
+}
+
