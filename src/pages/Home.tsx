@@ -46,6 +46,7 @@ const projectCategories: Array<'All' | ProjectCategory> = [
 export function Home() {
   const [projectFilter, setProjectFilter] = useState<(typeof projectCategories)[number]>('All')
   const [sent, setSent] = useState(false)
+  const [submitError, setSubmitError] = useState('')
   const filteredProjects =
     projectFilter === 'All'
       ? projects
@@ -57,7 +58,33 @@ export function Home() {
     formState: { errors, isSubmitting },
   } = useForm<ContactValues>({ resolver: zodResolver(contactSchema) })
 
-  const submitContact = (values: ContactValues) => {
+  const submitContact = async (values: ContactValues) => {
+    setSent(false)
+    setSubmitError('')
+    const apiUrl = import.meta.env.VITE_CONTACT_API_URL
+
+    if (apiUrl) {
+      try {
+        const response = await fetch(apiUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ...values, inquiryType: 'General Question', website: '' }),
+        })
+        const result = (await response.json()) as { success?: boolean; message?: string }
+
+        if (!response.ok || !result.success) {
+          throw new Error(result.message || 'Unable to send your message right now.')
+        }
+
+        setSent(true)
+        reset()
+        return
+      } catch (error) {
+        setSubmitError(error instanceof Error ? error.message : 'Unable to send your message right now.')
+        return
+      }
+    }
+
     const subject = encodeURIComponent(`${values.subject} — from ${values.name}`)
     const body = encodeURIComponent(
       `${values.message}\n\nFrom: ${values.name}\nEmail: ${values.email}`,
@@ -375,11 +402,16 @@ export function Home() {
             </Field>
             {sent && (
               <p role="status" className="text-sm font-semibold text-emerald-300">
-                Your email app has been opened with the message prepared.
+                Thanks — your message has been received.
+              </p>
+            )}
+            {submitError && (
+              <p role="alert" className="text-sm font-semibold text-rose-300">
+                {submitError}
               </p>
             )}
             <Button type="submit" disabled={isSubmitting} className="justify-self-start">
-              Prepare email <ArrowRight size={17} />
+              Send message <ArrowRight size={17} />
             </Button>
           </form>
         </div>

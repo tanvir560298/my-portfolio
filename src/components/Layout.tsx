@@ -1,5 +1,5 @@
 import { useState, type ReactNode } from 'react'
-import { Menu, X } from 'lucide-react'
+import { GraduationCap, Menu, X } from 'lucide-react'
 import { Link, Outlet } from 'react-router-dom'
 import { navItems, personal } from '../data/content'
 import { Container } from './ui'
@@ -30,20 +30,26 @@ export function Layout({ children }: { children?: ReactNode }) {
           <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary navigation">
             {navItems.map((item) => {
               const isHash = item.href.startsWith('/#') || item.href.startsWith('#')
+              const isCoursesLink = item.label === 'Courses by Tanvir Ahmad'
+              const linkClassName = isCoursesLink
+                ? 'inline-flex items-center gap-1.5 whitespace-nowrap rounded-lg border border-emerald-300/40 bg-emerald-400/15 px-3 py-2 text-xs font-extrabold text-emerald-200 shadow-[0_0_18px_rgba(52,211,153,0.28)] transition hover:bg-emerald-400/25 hover:text-white'
+                : 'rounded-lg px-3 py-2 text-sm font-medium text-slate-300 transition hover:bg-white/5 hover:text-white'
               return isHash ? (
                 <a
                   key={item.label}
                   href={item.href}
-                  className="rounded-lg px-3 py-2 text-sm font-medium text-slate-300 transition hover:bg-white/5 hover:text-white"
+                  className={linkClassName}
                 >
+                  {isCoursesLink && <GraduationCap size={15} aria-hidden="true" />}
                   {item.label}
                 </a>
               ) : (
                 <Link
                   key={item.label}
                   to={item.href}
-                  className="rounded-lg px-3 py-2 text-sm font-medium text-slate-300 transition hover:bg-white/5 hover:text-white"
+                  className={linkClassName}
                 >
+                  {isCoursesLink && <GraduationCap size={15} aria-hidden="true" />}
                   {item.label}
                 </Link>
               )
@@ -68,13 +74,18 @@ export function Layout({ children }: { children?: ReactNode }) {
           >
             {navItems.map((item) => {
               const isHash = item.href.startsWith('/#') || item.href.startsWith('#')
+              const isCoursesLink = item.label === 'Courses by Tanvir Ahmad'
+              const linkClassName = isCoursesLink
+                ? 'flex items-center gap-2 rounded-lg border border-emerald-300/40 bg-emerald-400/15 px-3 py-3 font-bold text-emerald-200 shadow-[0_0_18px_rgba(52,211,153,0.2)] hover:bg-emerald-400/25 hover:text-white'
+                : 'block rounded-lg px-3 py-3 font-medium text-slate-200 hover:bg-white/5'
               return isHash ? (
                 <a
                   key={item.label}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="block rounded-lg px-3 py-3 font-medium text-slate-200 hover:bg-white/5"
+                  className={linkClassName}
                 >
+                  {isCoursesLink && <GraduationCap size={17} aria-hidden="true" />}
                   {item.label}
                 </a>
               ) : (
@@ -82,8 +93,9 @@ export function Layout({ children }: { children?: ReactNode }) {
                   key={item.label}
                   to={item.href}
                   onClick={() => setOpen(false)}
-                  className="block rounded-lg px-3 py-3 font-medium text-slate-200 hover:bg-white/5"
+                  className={linkClassName}
                 >
+                  {isCoursesLink && <GraduationCap size={17} aria-hidden="true" />}
                   {item.label}
                 </Link>
               )

@@ -116,7 +116,7 @@ export function Hub() {
               <span className="mt-1 block text-xs font-semibold uppercase tracking-wider text-slate-400">DSA Solved</span>
             </div>
             <div className="rounded-xl bg-white/5 p-4 border border-white/5 text-center">
-              <span className="block text-2xl font-black text-emerald-400 sm:text-3xl">2</span>
+              <span className="block text-2xl font-black text-emerald-400 sm:text-3xl">3</span>
               <span className="mt-1 block text-xs font-semibold uppercase tracking-wider text-slate-400">Active Courses</span>
             </div>
             <div className="rounded-xl bg-white/5 p-4 border border-white/5 text-center">
@@ -168,10 +168,10 @@ export function Hub() {
               {/* Left Column: Courses & Live schedule */}
               <div className="space-y-8 lg:col-span-5">
                 {/* Active Courses */}
-                <Card>
+                <Card id="courses" className="scroll-mt-24 border-emerald-400/25 shadow-[0_0_30px_rgba(52,211,153,0.12)]">
                   <h2 className="flex items-center gap-2 text-xl font-bold text-white mb-6">
                     <BookOpen className="text-emerald-400" />
-                    My Structured Courses
+                    Courses Taken by Tanvir Ahmad
                   </h2>
                   <div className="space-y-6">
                     {courses.map((course) => (
