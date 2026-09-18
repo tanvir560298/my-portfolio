@@ -17,31 +17,30 @@ import type {
 export const personal = {
   name: 'Tanvir Ahmad',
   initials: 'TA',
-  title: 'Full-Stack Developer (React & Java/Spring Boot) & Aspiring Educator',
-  eyebrow: 'Developer • Preparing to teach on YouTube',
+  title: 'Full-Stack MERN Developer & CEO of Lugaish',
+  eyebrow: 'MERN Stack Developer • CEO & Instructor',
   pitch:
-    'I build robust web applications with React and Spring Boot, and am preparing to teach full-stack development on YouTube.',
-  bio: 'I am a third-semester student at the Islamic University of Madinah and an active full-stack web developer specializing in React and Java/Spring Boot. For the past two months, I have been working with Lugaish as both an instructor and a web developer. I genuinely enjoy sharing what I learn and explaining it to others in a simple way. Teaching is both a personal interest and a meaningful part of my learning journey, and I am preparing to share practical web development and backend engineering lessons with students on YouTube.',
-  location: '[LOCATION]',
-  email: '[EMAIL]',
-  education: 'Islamic University of Madinah — 3rd Semester Student',
-  experience: 'Instructor & Web Developer at Lugaish — 2 months (current)',
-  certifications: '[CERTIFICATIONS]',
-  availability: 'Open to suitable opportunities',
-  languages: '[LANGUAGES]',
-  github: '[GITHUB URL]',
-  linkedin: '[LINKEDIN URL]',
-  resume: '/resume-placeholder.txt',
+    'I build high-performance web applications with MongoDB, Express.js, React, and Node.js, and lead Lugaish — an interactive language learning platform for students.',
+  bio: 'I am a student at the Islamic University of Madinah, an active Full-Stack MERN developer, and the CEO of Lugaish (lugaish.vercel.app), where I also serve as an English instructor. Beyond software engineering, I served as District Secretary for Interact District 3281 Bangladesh coordinating youth initiatives across 2,000+ students, graduated from the American Center\'s intensive 2-Year English & Leadership Program, represented youth as an international leadership delegate in Nepal, and completed specialized executive training in The Art of Negotiation. I merge engineering craftsmanship with strategic deal-making, cross-cultural communication, and proven team leadership.',
+  location: 'Madinah, Saudi Arabia / Dhaka, Bangladesh',
+  email: 'tahmadium@gmail.com',
+  education: 'Islamic University of Madinah — Student',
+  experience: 'Founder & CEO, Lead Developer & English Instructor at Lugaish • Former District Secretary at Interact District 3281 Bangladesh (Led 2,000+ Students)',
+  certifications: 'American Center 2-Year English & Leadership Program, Nepal Youth Leadership Delegate, The Art of Negotiation Program',
+  availability: 'Open to suitable opportunities & collaborations',
+  languages: 'English (Proficient — Instructor), Bengali (Native), Urdu (Fluent), Hindi (Fluent), Arabic (Academic / Working)',
+  github: 'https://github.com/tanvir560298',
+  linkedin: 'https://www.linkedin.com/in/tanvir-ahmad-701265415/',
+  resume: '/Tanvir_Ahmad_CV.pdf',
 }
 
 export const navItems = [
   { label: 'Home', href: '/#home' },
   { label: 'About', href: '/#about' },
   { label: 'Skills', href: '/#skills' },
-  { label: 'Courses by Tanvir Ahmad', href: '/hub#courses' },
+  { label: 'Subjects', href: '/hub#subjects' },
   { label: 'Projects', href: '/#projects' },
   { label: 'Teaching', href: '/#teaching' },
-  { label: 'Dev-Instructor Hub', href: '/hub' },
   { label: 'Resources', href: '/resources' },
   { label: 'Resume', href: '/#resume' },
   { label: 'Contact', href: '/#contact' },
@@ -51,41 +50,72 @@ export const skills: SkillGroup[] = [
   {
     category: 'Frontend',
     items: [
+      'React',
+      'JavaScript (ES6+)',
+      'TypeScript',
       'HTML5',
       'CSS3',
-      'JavaScript',
-      'TypeScript',
-      'React',
       'Tailwind CSS',
+      'DaisyUI',
       'Responsive Design',
       'State Management',
+      'React Router',
     ],
   },
   {
     category: 'Backend',
     items: [
-      'Java',
-      'Spring Boot',
-      'Spring MVC (REST APIs)',
-      'Spring Security & JWT',
-      'Authentication & Authorization',
-      'Validation & Exception Handling',
+      'Node.js',
+      'Express.js',
+      'RESTful APIs',
+      'JWT Authentication',
+      'Role-Based Access Control',
+      'API Security',
+      'CRUD Operations',
     ],
   },
-  { category: 'Database & ORM', items: ['Spring Data JPA', 'Hibernate', 'PostgreSQL', 'MySQL', 'MongoDB', 'Database Modeling'] },
   {
-    category: 'Tools',
-    items: ['Git', 'GitHub', 'VS Code', 'Postman', 'npm', 'Vite', 'Deployment Platforms'],
+    category: 'Database & Cloud',
+    items: [
+      'MongoDB',
+      'Mongoose',
+      'Firebase Authentication',
+      'Database Modeling',
+      'Data Aggregations & Indexing',
+    ],
+  },
+  {
+    category: 'Tools & Platforms',
+    items: [
+      'Git',
+      'GitHub',
+      'VS Code',
+      'Postman',
+      'npm',
+      'Vite',
+      'Vercel',
+      'Render',
+    ],
+  },
+  {
+    category: 'Leadership & Negotiation',
+    items: [
+      'Youth Leadership (Interact 3281)',
+      'Strategic Negotiation & Deal Making',
+      'Team Leadership (2,000+ Students)',
+      'Cross-Cultural Communication',
+      'English Language Instruction',
+      'Public Speaking & Mentorship',
+    ],
   },
   {
     category: 'Additional',
     items: [
-      'Accessibility',
-      'SEO Basics',
-      'Testing',
-      'Clean Code',
-      'Problem-Solving',
+      'Clean Code & Architecture',
+      'Problem Solving',
       'Data Structures & Algorithms',
+      'SEO & Web Accessibility',
+      'Conflict Mediation & Diplomacy',
     ],
   },
 ]
@@ -93,106 +123,135 @@ export const skills: SkillGroup[] = [
 export const projects: Project[] = [
   {
     slug: 'lugaish-language-learning-platform',
-    title: 'Lugaish Language Learning Platform',
+    title: 'Lugaish — Language Learning Platform for Students',
     description:
-      'A live Arabic and English learning platform that I designed and developed single-handedly for Lugaish.',
+      'An interactive language learning platform built specifically for students to master Arabic and English with 60-day curriculum tiers, audio masterclasses, and exam practice. Founded and developed as CEO.',
     fullDescription:
-      'Lugaish is an AI-powered Arabic and English learning platform featuring daily lessons, guided practice, progress tracking, and weekly interview preparation. I was the sole website developer.',
-    category: 'Frontend',
+      'Lugaish (lugaish.vercel.app) is an online language learning platform designed specifically for students to acquire Arabic and English proficiency through daily structured classes, 12-day monthly subscription tiers, interactive audio practice, and Cambridge test preparation. As Founder & CEO and Lead Developer, I shaped the product vision for students, architected the full-stack system, developed the web application, and manage production deployment.',
+    category: 'Full Stack',
     status: 'Completed',
-    technologies: ['Web Development', 'Responsive UI', 'SEO', 'Vercel'],
+    technologies: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'Vercel', 'Render'],
     problem:
-      'Lugaish needed a clear online platform to present its Arabic and English learning experience.',
+      'Students learning Arabic and English often struggle with fragmented materials, inconsistent daily pacing, and losing access to completed courses.',
     solution:
-      'I independently developed and deployed a responsive website that communicates the learning experience and its core features.',
-    role: 'Sole website developer — responsible for the website from implementation to deployment.',
+      'Architected and launched a tailored language learning platform for students with cumulative monthly tier progression, permanent lifetime access retention for enrolled months, audio masterclasses, and an intuitive student/admin portal.',
+    role: 'Founder & CEO, Lead Developer — Responsible for student learning vision, curriculum structure, full-stack architecture, and production deployment.',
     features: [
-      'Arabic and English learning experience',
-      'Daily lessons',
-      'Guided practice',
-      'Progress tracking',
-      'Weekly interview preparation',
-      'Responsive interface',
+      'Progressive 60-day curriculum across 5 monthly tier modules',
+      'Lifetime permanent access retention for enrolled months',
+      'Masterclass audio player integration with Cambridge test practice',
+      'Role-based admin controls for instant student tier upgrades',
+      'Mobile-first responsive interface optimized for low latency',
+      'Stateless session management and authenticated API endpoints',
     ],
     decisions: [
-      'Responsive, mobile-friendly presentation',
-      'Search and social sharing metadata',
-      'Production deployment on Vercel',
+      'Single-page application architecture using React and Vite for immediate responsiveness',
+      'Modular Express.js backend with MongoDB persistence deployed on Render',
+      'Client-side state hydration preserving lifetime tier progress across sessions',
+      'Production deployment and continuous delivery configured on Vercel',
     ],
-    challenges: '[PROJECT CHALLENGES — DETAILS TO BE ADDED]',
-    resolution: '[PROJECT SOLUTIONS — DETAILS TO BE ADDED]',
-    lessons: ['[LESSONS LEARNED — DETAILS TO BE ADDED]'],
-    improvements: ['Continue improving the platform as real learner needs develop'],
+    challenges: 'Balancing progressive curriculum unlocking in 12-day batches while guaranteeing that enrolled students permanently retain lifetime access to all previous months.',
+    resolution: 'Implemented cumulative tier validation at both API and client route boundaries, ensuring students can freely revisit earlier material without regression.',
+    lessons: [
+      'Clear role and permission separation simplifies access control across student cohorts',
+      'Consistent curriculum pacing directly enhances student engagement and completion rates',
+    ],
+    improvements: [
+      'Introduce AI-assisted speech pronunciation feedback',
+      'Expand interactive live cohort practice rooms',
+    ],
     liveUrl: 'https://lugaish.vercel.app',
-    completedAt: '[COMPLETION DATE]',
+    repoUrl: 'https://github.com/tanvir560298/Lugaish-client',
+    completedAt: 'August 2026',
     featured: true,
   },
   {
-    slug: 'react-springboot-learning-platform',
-    title: 'React & Spring Boot Learning Platform',
-    description: 'Sample concept for a structured course, progress, and mentoring experience.',
+    slug: 'studymate-collaborative-learning-platform',
+    title: 'StudyMate — Collaborative Study Partner Platform',
+    description:
+      'A full-stack collaborative platform for students to find study partners, manage learning requests, and connect by subject and skill level.',
     fullDescription:
-      'This is a clearly labeled portfolio sample concept, not claimed client or completed work.',
-    category: 'Educational',
-    status: 'Sample concept',
-    technologies: ['React', 'Spring Boot', 'Spring Security', 'PostgreSQL'],
-    problem: 'Beginner learners need one clear place to follow lessons and track progress.',
-    solution:
-      'A proposed learning workspace with modules, progress tracking, and instructor feedback.',
-    role: 'Concept, product planning, UI system, and proposed full-stack implementation.',
-    features: ['Structured modules', 'Progress tracking', 'Practice tasks', 'Mentor feedback'],
-    decisions: ['Feature-based structure', 'Role-aware access', 'Spring Security REST filters'],
-    challenges: 'Designing a useful learning flow without overwhelming a new developer.',
-    resolution: 'Use progressive disclosure and divide every stage into small outcomes.',
-    lessons: ['Start with learner outcomes', 'Keep interfaces focused'],
-    improvements: ['Add real course content', 'User testing', 'Accessibility audit'],
-    completedAt: '[COMPLETION DATE]',
-    featured: true,
-  },
-  {
-    slug: 'student-course-dashboard',
-    title: 'Student Course Dashboard',
-    description: 'Sample frontend concept for lessons, assignments, and learning progress.',
-    fullDescription: 'A placeholder case study demonstrating the intended presentation format.',
-    category: 'Frontend',
-    status: 'Sample concept',
-    technologies: ['React', 'TypeScript', 'Tailwind CSS'],
-    problem: 'Course information can feel scattered and difficult to prioritize.',
-    solution: 'A focused dashboard showing next steps, progress, and recent learning activity.',
-    role: 'Sample UI architecture and frontend implementation.',
-    features: [
-      'Responsive dashboard',
-      'Course cards',
-      'Progress overview',
-      'Accessible navigation',
-    ],
-    decisions: ['Typed content', 'Reusable cards', 'Mobile-first layout'],
-    challenges: 'Presenting several content types without visual clutter.',
-    resolution: 'A clear hierarchy and limited number of emphasized actions.',
-    lessons: ['Hierarchy matters more than decoration', 'Mobile constraints improve focus'],
-    improvements: ['Connect a real API', 'Add learner interviews'],
-    completedAt: '[COMPLETION DATE]',
-    featured: true,
-  },
-  {
-    slug: 'full-stack-commerce',
-    title: 'Full-Stack Spring Boot & React Commerce',
-    description: 'Planned sample exploring catalogue, cart, authentication, and order flows.',
-    fullDescription: 'This project is planned content and is not represented as completed work.',
+      'StudyMate is a full-stack MERN web application built to connect students and self-learners with compatible study partners. Users can create learning profiles, explore peers by subject and experience level, exchange partner requests, manage dynamic connections, and toggle between responsive light/dark themes.',
     category: 'Full Stack',
-    status: 'Coming soon',
-    technologies: ['React', 'Spring Boot', 'Spring Data JPA', 'PostgreSQL'],
-    problem: 'Plan a reliable end-to-end commerce workflow.',
-    solution: 'A staged implementation beginning with catalogue and cart fundamentals.',
-    role: 'Planned full-stack development.',
-    features: ['Product catalogue', 'Cart', 'Authentication', 'Order workflow'],
-    decisions: ['To be documented during implementation'],
-    challenges: 'To be documented during implementation.',
-    resolution: 'To be documented during implementation.',
-    lessons: ['To be documented after implementation'],
-    improvements: ['Payments', 'Testing', 'Deployment'],
-    completedAt: '[COMPLETION DATE]',
-    featured: false,
+    status: 'Completed',
+    technologies: ['MongoDB', 'Express.js', 'React', 'Node.js', 'Firebase Auth', 'Tailwind CSS', 'DaisyUI', 'Axios', 'Vercel'],
+    problem:
+      'Learners often struggle in isolation when preparing for exams or coding interviews, lacking a simple way to find peers studying the same subjects at their exact skill level.',
+    solution:
+      'Developed an interactive study-partner matching web app with Firebase authentication, subject-based filtering, partner request workflows, connection CRUD operations, and an Express/MongoDB backend.',
+    role: 'Full-Stack MERN Developer — Built the complete client UI with React/Tailwind/DaisyUI and the backend API with Node.js, Express, and MongoDB.',
+    features: [
+      'User authentication with Firebase & personalized study profiles',
+      'Search, filter, and sort study partners by subject and experience level',
+      'Send, accept, and manage connection requests in real time',
+      'Full CRUD connection management (view, update, remove connections)',
+      'Responsive modern UI with dynamic light & dark mode themes',
+      'RESTful backend architecture built with Express.js and MongoDB',
+    ],
+    decisions: [
+      'Used MongoDB native driver and clean Express routes for fast, flexible schema management',
+      'Integrated Firebase Authentication on frontend with secure client-server sync',
+      'Built UI with Tailwind CSS and DaisyUI for rapid, mobile-first responsive design',
+      'Implemented SweetAlert2 and Toast notifications for intuitive user feedback',
+    ],
+    challenges: 'Implementing seamless state synchronization across real-time partner requests and connection updates while maintaining consistent dark and light mode UI performance.',
+    resolution: 'Utilized Axios interceptors with centralized React state management and structured REST endpoints to keep partner lists and connection statuses synchronized.',
+    lessons: [
+      'User matching workflows require clear, immediate visual confirmation on every status change',
+      'Separating connection status into discrete states simplifies request tracking and UI rendering',
+    ],
+    improvements: [
+      'Add real-time peer-to-peer web chat with Socket.io',
+      'Implement scheduled virtual study rooms with calendar integration',
+    ],
+    liveUrl: 'https://studymate-client-two.vercel.app',
+    repoUrl: 'https://github.com/tanvir560298/studymate-client',
+    completedAt: 'May 2026',
+    featured: true,
+  },
+  {
+    slug: 'bookcourier-library-delivery-platform',
+    title: 'BookCourier — Library Book Borrowing & Delivery Platform',
+    description:
+      'A full-stack library management and book ordering platform with multi-role dashboards for users, librarians, and administrators.',
+    fullDescription:
+      'BookCourier is a modern MERN stack library and book ordering platform. It enables readers to browse book catalogues, request doorstep book deliveries, and monitor order lifecycles. It features a complete Role-Based Access Control (RBAC) architecture with dedicated dashboards for readers, librarians, and system administrators.',
+    category: 'Full Stack',
+    status: 'Completed',
+    technologies: ['MongoDB', 'Express.js', 'React', 'Node.js', 'JWT', 'Firebase Auth', 'Tailwind CSS', 'DaisyUI', 'Vercel'],
+    problem:
+      'Traditional academic and public libraries rely on manual in-person visits and physical paper records, making catalogue browsing, remote borrowing, and delivery tracking cumbersome.',
+    solution:
+      'Engineered a full-featured digital book ordering and delivery platform featuring real-time catalogue searching, automated borrowing requests, order lifecycle management, and administrative dashboards.',
+    role: 'Full-Stack MERN Developer — Architected frontend SPA and backend REST API with JWT role-based access control, database schema, and deployment.',
+    features: [
+      'Multi-role access control (separate dashboards for Reader, Librarian, and Admin)',
+      'Interactive book catalogue with search, category filtering, and sorting',
+      'Online book ordering, delivery requests, and invoice tracking',
+      'Order management workflow with real-time status updates and order cancellation',
+      'Admin tools for managing user roles, book inventory, and system orders',
+      'Secure authentication with Firebase and stateless JWT authorization middleware',
+    ],
+    decisions: [
+      'Secured sensitive administrative and librarian routes using server-side JWT verification',
+      'Implemented MongoDB collections with optimized indexing for book catalogue search and order queries',
+      'Utilized Tailwind CSS and DaisyUI for accessible, responsive multi-role dashboards',
+      'Created modular Express controllers separating business logic, auth middleware, and database access',
+    ],
+    challenges: 'Designing and enforcing strict role-based access control (RBAC) across three distinct user personas while keeping the user experience frictionless.',
+    resolution: 'Created custom JWT authorization middleware on the Express server to verify role claims on every protected endpoint, paired with protected route wrappers in React Router.',
+    lessons: [
+      'Role authorization must always be enforced at the API layer, never solely in frontend routing',
+      'Clear status transitions (Pending -> Approved -> Out for Delivery -> Delivered) prevent invalid order updates',
+    ],
+    improvements: [
+      'Integrate automated overdue book SMS / email reminders',
+      'Add payment gateway integration for premium deliveries and late fees',
+    ],
+    liveUrl: 'https://bookcourier-client-neon.vercel.app',
+    repoUrl: 'https://github.com/tanvir560298/bookcourier-client',
+    completedAt: 'May 2026',
+    featured: true,
   },
 ]
 
@@ -368,65 +427,78 @@ export const resources: Resource[] = [
 
 export const services: Service[] = [
   {
+    title: 'MERN Stack Web Development',
+    description: 'End-to-end web applications built with MongoDB, Express.js, React, and Node.js.',
+  },
+  {
     title: 'Frontend Website Development',
-    description: 'Responsive, accessible interfaces built around clear business goals.',
+    description: 'Modern, accessible, and ultra-fast interfaces crafted with React, Vite, and Tailwind CSS.',
   },
   {
-    title: 'React & Spring Boot Development',
-    description: 'Practical full-stack application planning and backend integration.',
+    title: 'RESTful API & Backend Engineering',
+    description: 'Scalable Node/Express APIs with secure JWT authentication, role guards, and MongoDB integration.',
   },
   {
-    title: 'Portfolio Website Development',
-    description: 'Focused portfolio sites that make skills and work easy to evaluate.',
+    title: 'Portfolio & Product Consulting',
+    description: 'Clear, high-converting web applications designed to showcase real projects and value.',
   },
   {
-    title: 'Beginner Web Tutoring',
-    description: 'Step-by-step support for learners building strong fundamentals.',
+    title: 'MERN Stack Mentorship & Tutoring',
+    description: 'Practical, step-by-step guidance for beginners and students mastering full-stack web development.',
   },
   {
-    title: 'React & Spring Boot Mentorship',
-    description: 'A structured learning path based on your current level and goals.',
-  },
-  {
-    title: 'Code Review & Project Guidance',
-    description: 'Constructive feedback on code, structure, and next steps.',
+    title: 'Code Review & Architecture Planning',
+    description: 'Constructive audits of full-stack code, database modeling, security patterns, and clean design.',
   },
 ]
 
 export const timeline: TimelineEntry[] = [
   {
-    date: '[DATE]',
-    title: 'Started learning web development',
-    description: 'The beginning of the editable development journey.',
+    date: '2024',
+    title: 'Started Web Development Journey',
+    description: 'Built deep foundations in semantic HTML, CSS, JavaScript, and responsive design.',
   },
   {
-    date: '[DATE]',
-    title: 'Built HTML, CSS, and JavaScript foundations',
-    description: 'Focused on the core technologies of the web.',
+    date: '2025',
+    title: 'Adopted React & Frontend Ecosystem',
+    description: 'Mastered component-driven development, state management, Tailwind CSS, and client routing.',
   },
   {
-    date: '[DATE]',
-    title: 'Started learning React and Java/Spring Boot',
-    description: 'Moved toward enterprise full-stack development and web API engineering.',
-  },
-  {
-    date: '[DATE]',
-    title: 'Developed and launched the Lugaish website',
+    date: '2023 – 2024',
+    title: 'District Secretary — Interact District 3281 Bangladesh',
     description:
-      'Single-handedly developed the live web platform while also serving as a non-web-development instructor at Lugaish.',
+      'Led district youth operations, organized nationwide conferences, and coordinated leadership initiatives with over 2,000+ students across Bangladesh.',
   },
   {
-    date: '[FUTURE DATE]',
-    title: 'Next milestone',
-    description: 'Replace this with the next verified achievement.',
+    date: '2024 – 2025',
+    title: 'American Center 2-Year Fellowship & Nepal Leadership',
+    description:
+      'Completed an intensive 2-year English Access & Leadership course via the American Center (US Embassy Dhaka) and represented Bangladesh as a youth leadership delegate in Nepal.',
+  },
+  {
+    date: 'Early 2026',
+    title: 'MERN Full-Stack Mastery & The Art of Negotiation',
+    description:
+      'Engineered full-stack applications with Node.js, Express, MongoDB, and React, while completing specialized training in The Art of Negotiation and deal making.',
+  },
+  {
+    date: 'Mid 2026',
+    title: 'Founded & Launched Lugaish as CEO',
+    description:
+      'Spearheaded the platform vision and developed Lugaish (lugaish.vercel.app), a dedicated online language learning platform for students, while serving as English instructor.',
+  },
+  {
+    date: 'Present',
+    title: 'Expanding Digital Learning & Development',
+    description: 'Empowering students on Lugaish and preparing comprehensive full-stack web development courses.',
   },
 ]
 
 export const testimonials: Testimonial[] = []
 
 export const seo = {
-  title: `${personal.name} — React & Spring Boot Developer & Instructor`,
-  description: 'Robust React & Java/Spring Boot applications and clear, beginner-friendly full-stack guidance.',
+  title: `${personal.name} — MERN Stack Developer & CEO of Lugaish`,
+  description: 'Portfolio of Tanvir Ahmad — Full-Stack MERN Developer and CEO of Lugaish, a language learning platform for students.',
 }
 
 export const courses: Course[] = [
@@ -435,46 +507,400 @@ export const courses: Course[] = [
     title: 'Web Development',
     studentsCount: 22,
     lessonsCount: 28,
-    description: 'A practical foundation for building responsive, accessible, and interactive websites from the ground up.',
+    description: 'Learn how to create modern websites step by step, from your first page to a complete project.',
     modules: [
-      'HTML5, semantic structure, and accessible page foundations',
-      'CSS layout, responsive design, and polished visual interfaces',
-      'JavaScript fundamentals, DOM manipulation, and browser events',
-      'Modern JavaScript, async code, APIs, and error handling',
-      'React components, hooks, routing, and state management',
-      'Building and deploying a complete portfolio project',
-    ],
+      {
+        title: 'HTML and page structure',
+        videoUrl: 'https://www.youtube.com/embed/kUMe1FH4WHY',
+        slidesUrl: '/slides/webdev-html.pdf',
+        slidesPreview: [
+          'Understanding semantic HTML tags',
+          'Document structure: head, body, header, footer, section',
+          'Working with text elements, links, and images',
+          'Forms, inputs, and validation attributes'
+        ],
+        practiceProblems: [
+          {
+            id: 'webdev-html-q1',
+            question: 'What is the purpose of the alt attribute in an img tag?',
+            answer: 'It provides alternative text description for the image if it cannot be loaded, which is essential for screen readers and accessibility.',
+            hint: 'Think about screen readers and slow network connections.'
+          }
+        ]
+      },
+      {
+        title: 'CSS and responsive design',
+        videoUrl: 'https://www.youtube.com/embed/1Rs2ND1ryYc',
+        slidesUrl: '/slides/webdev-css.pdf',
+        slidesPreview: [
+          'CSS selectors, properties, and cascade rules',
+          'The CSS Box Model: margin, border, padding, content',
+          'Flexbox and Grid layout systems',
+          'Media queries and mobile-first responsive design'
+        ],
+        practiceProblems: [
+          {
+            id: 'webdev-css-q1',
+            question: 'What is the difference between margin and padding in CSS?',
+            answer: 'Margin creates space outside the element\'s border, while padding creates space inside the element\'s border (between the content and the border).',
+            hint: 'Think about the boundaries of the element\'s border.'
+          }
+        ]
+      },
+      {
+        title: 'JavaScript fundamentals',
+        videoUrl: 'https://www.youtube.com/embed/W6NZfCO5SIk',
+        slidesUrl: '/slides/webdev-js.pdf',
+        slidesPreview: [
+          'Variables, primitive types, and operators',
+          'Control flow: if statements, loops, and switch',
+          'Functions, arrow syntax, and scope',
+          'Arrays, objects, and basic built-in methods'
+        ],
+        practiceProblems: [
+          {
+            id: 'webdev-js-q1',
+            question: 'What is the difference between let, const, and var for declaring variables?',
+            answer: 'let and const are block-scoped and do not allow hoisting issues, whereas const prevents reassignment. var is function-scoped and has hoisting quirks.',
+            hint: 'Compare scope and reassignment rules.'
+          }
+        ]
+      },
+      {
+        title: 'Working with APIs',
+        videoUrl: 'https://www.youtube.com/embed/RGKi6LSPDfo',
+        slidesUrl: '/slides/webdev-apis.pdf',
+        slidesPreview: [
+          'What is a REST API and HTTP request methods (GET, POST, etc.)',
+          'Using fetch() to retrieve JSON data',
+          'Handling Promises with async/await',
+          'Error handling and display feedback in UI'
+        ],
+        practiceProblems: [
+          {
+            id: 'webdev-apis-q1',
+            question: 'Explain what async and await do in JavaScript.',
+            answer: 'async declares that a function returns a Promise and allows the use of await inside it. await pauses execution of the async function until the Promise resolves.',
+            hint: 'Think about dealing with promises in a synchronous-looking way.'
+          }
+        ]
+      },
+      {
+        title: 'React basics and components',
+        videoUrl: 'https://www.youtube.com/embed/SqcY0GlETPk',
+        slidesUrl: '/slides/webdev-react.pdf',
+        slidesPreview: [
+          'Understanding JSX syntax and virtual DOM',
+          'Functional components and passing props',
+          'Managing state with the useState hook',
+          'Handling events and rendering lists'
+        ],
+        practiceProblems: [
+          {
+            id: 'webdev-react-q1',
+            question: 'Why do we need a unique key prop when rendering a list of elements in React?',
+            answer: 'React uses keys to identify which items have changed, been added, or been removed, optimizing rendering performance and maintaining correct component state.',
+            hint: 'Think about virtual DOM reconciliation.'
+          }
+        ]
+      },
+      {
+        title: 'Build and publish a complete project',
+        videoUrl: 'https://www.youtube.com/embed/2-crBg6Z0P0',
+        slidesUrl: '/slides/webdev-project.pdf',
+        slidesPreview: [
+          'Structuring a multi-component React app',
+          'Managing build scripts with Vite',
+          'Deploying to production hosting like Vercel or Netlify',
+          'Basic production optimizations and checklist'
+        ],
+        practiceProblems: [
+          {
+            id: 'webdev-project-q1',
+            question: 'What is the purpose of running npm run build before deploying?',
+            answer: 'It compiles, bundles, and minifies the source code into optimized HTML, CSS, and JS assets inside the dist folder ready for production servers.',
+            hint: 'Think about file sizes and browser compatibility.'
+          }
+        ]
+      }
+    ]
   },
   {
     id: 'java-programming',
     title: 'Java Programming',
     studentsCount: 18,
     lessonsCount: 24,
-    description: 'A structured path through Java programming, object-oriented thinking, and the foundations needed for backend development.',
+    description: 'Build a strong programming foundation with Java and learn to solve problems with confidence.',
     modules: [
-      'Java syntax, variables, data types, and control flow',
-      'Methods, arrays, strings, and problem-solving patterns',
-      'Object-oriented programming: classes, objects, and inheritance',
-      'Interfaces, abstraction, encapsulation, and polymorphism',
-      'Collections, exception handling, and clean code practices',
-      'Introduction to Spring Boot and REST API development',
-    ],
+      {
+        title: 'Variables, data types, and conditions',
+        videoUrl: 'https://www.youtube.com/embed/eIrMbLyEl8M',
+        slidesUrl: '/slides/java-variables.pdf',
+        slidesPreview: [
+          'Java syntax structure and the main method',
+          'Primitive data types (int, double, boolean, char)',
+          'Variable declarations and naming conventions',
+          'Conditional statements (if, else if, else, switch)'
+        ],
+        practiceProblems: [
+          {
+            id: 'java-var-q1',
+            question: 'What is the difference between primitive data types and reference data types in Java?',
+            answer: 'Primitives store actual values directly in memory (stack), whereas reference types store references/addresses pointing to objects in the heap.',
+            hint: 'Compare stack and heap memory.'
+          }
+        ]
+      },
+      {
+        title: 'Methods, arrays, and strings',
+        videoUrl: 'https://www.youtube.com/embed/A74TOX803D0',
+        slidesUrl: '/slides/java-methods.pdf',
+        slidesPreview: [
+          'Declaring and calling methods, parameters, and return values',
+          'Creating and traversing single-dimensional arrays',
+          'String manipulation methods (concat, length, substring)',
+          'Difference between == and .equals() for String comparison'
+        ],
+        practiceProblems: [
+          {
+            id: 'java-method-q1',
+            question: 'Why should you use .equals() instead of == to compare strings for value equality?',
+            answer: '== compares the reference/memory address of the string objects, while .equals() compares the actual character contents of the strings.',
+            hint: 'Think about the string pool and object references.'
+          }
+        ]
+      },
+      {
+        title: 'Classes and objects',
+        videoUrl: 'https://www.youtube.com/embed/IU58d04-gI4',
+        slidesUrl: '/slides/java-classes.pdf',
+        slidesPreview: [
+          'Object-oriented concepts: class blueprints vs. object instances',
+          'Defining fields, constructors, and getter/setter methods',
+          'Understanding private, public, and default access modifiers',
+          'The static keyword for fields and methods'
+        ],
+        practiceProblems: [
+          {
+            id: 'java-class-q1',
+            question: 'What is a constructor and what is its default behavior if you do not define one?',
+            answer: 'A constructor initializes a newly created object. If none is defined, Java automatically provides a default no-argument constructor that sets fields to default values.',
+            hint: 'Think about object initialization.'
+          }
+        ]
+      },
+      {
+        title: 'Core object-oriented programming',
+        videoUrl: 'https://www.youtube.com/embed/379D2yHAPwI',
+        slidesUrl: '/slides/java-oop.pdf',
+        slidesPreview: [
+          'Inheritance: extending classes and using super()',
+          'Polymorphism: method overloading vs. method overriding',
+          'Encapsulation: hiding implementation and exposing interfaces',
+          'Abstract classes vs. Interfaces'
+        ],
+        practiceProblems: [
+          {
+            id: 'java-oop-q1',
+            question: 'What is the main difference between an interface and an abstract class in Java?',
+            answer: 'An interface defines a contract (mostly abstract methods, multiple inheritance supported), whereas an abstract class can have instance fields and concrete methods (single inheritance only).',
+            hint: 'Compare inheritance rules and state storage.'
+          }
+        ]
+      },
+      {
+        title: 'Collections and error handling',
+        videoUrl: 'https://www.youtube.com/embed/27t3L0s_U-U',
+        slidesUrl: '/slides/java-collections.pdf',
+        slidesPreview: [
+          'Understanding exceptions: checked vs. unchecked',
+          'Using try, catch, finally, and throw blocks',
+          'The Java Collections Framework: List, Set, Map',
+          'Using ArrayList and HashMap in real tasks'
+        ],
+        practiceProblems: [
+          {
+            id: 'java-coll-q1',
+            question: 'What is the difference between checked exceptions and unchecked (runtime) exceptions?',
+            answer: 'Checked exceptions must be declared in the method signature or handled at compile time. Unchecked exceptions occur during runtime and do not require mandatory handling.',
+            hint: 'Think about compiler rules.'
+          }
+        ]
+      },
+      {
+        title: 'Introduction to Spring Boot',
+        videoUrl: 'https://www.youtube.com/embed/msXL2ODI9yU',
+        slidesUrl: '/slides/java-springboot.pdf',
+        slidesPreview: [
+          'Spring framework core concepts: Dependency Injection (DI) and Inversion of Control (IoC)',
+          'Setting up a Spring Boot project and directory structure',
+          'Creating REST controllers with @RestController and @GetMapping',
+          'Running and testing a basic Spring Boot endpoint'
+        ],
+        practiceProblems: [
+          {
+            id: 'java-spring-q1',
+            question: 'What does the @RestController annotation do in Spring Boot?',
+            answer: 'It marks a class as a controller where every method returns a domain object directly serialized into JSON/XML, combining @Controller and @ResponseBody.',
+            hint: 'Think about HTTP responses.'
+          }
+        ]
+      }
+    ]
   },
   {
     id: 'discrete-mathematics',
     title: 'Discrete Mathematics',
     studentsCount: 14,
     lessonsCount: 20,
-    description: 'The mathematical toolkit behind programming, algorithms, logical reasoning, and computer science problem solving.',
+    description: 'Understand the logic and mathematics used in programming and computer science.',
     modules: [
-      'Logic, propositions, truth tables, and logical equivalence',
-      'Sets, functions, relations, and mathematical notation',
-      'Counting principles, permutations, combinations, and probability',
-      'Proof techniques, induction, and recursive reasoning',
-      'Graphs, trees, paths, and real-world network models',
-      'Boolean algebra and foundations of computation',
-    ],
-  },
+      {
+        title: 'Logic and truth tables',
+        videoUrl: 'https://www.youtube.com/embed/xq7D1z7u2yE',
+        slidesUrl: '/slides/discrete-math-logic.pdf',
+        slidesPreview: [
+          'Introduction to Propositional Logic',
+          'Understanding logical connectives: AND (conjunction), OR (disjunction), NOT (negation)',
+          'How to construct truth tables step-by-step',
+          'Implications (if-then) and Biconditionals (if and only if)',
+          'Tautologies, Contradictions, and Logical Equivalence'
+        ],
+        practiceProblems: [
+          {
+            id: 'dm-logic-q1',
+            question: 'Let p be "It is raining" and q be "The ground is wet". Write the proposition p -> q in English.',
+            answer: 'If it is raining, then the ground is wet.',
+            hint: 'An implication p -> q is translated as "If p, then q".'
+          },
+          {
+            id: 'dm-logic-q2',
+            question: 'Construct the truth table for the expression p ^ ~p. What kind of proposition is this?',
+            answer: 'When p is T, ~p is F, and p ^ ~p is F. When p is F, ~p is T, and p ^ ~p is F. Since the final column is all False, this is a contradiction.',
+            hint: 'Create columns for p, ~p, and p ^ ~p. Calculate values for when p is True and False.'
+          },
+          {
+            id: 'dm-logic-q3',
+            question: 'Are the propositions p -> q and ~p v q logically equivalent?',
+            answer: 'Yes, they are logically equivalent. Both are False only when p is True and q is False, and True in all other cases. This equivalence is known as the Implication Law.',
+            hint: 'Compare their truth tables. They should have identical truth values for all truth assignments of p and q.'
+          }
+        ]
+      },
+      {
+        title: 'Sets, functions, and relations',
+        videoUrl: 'https://www.youtube.com/embed/2uS8aO3o7eE',
+        slidesUrl: '/slides/discrete-math-sets.pdf',
+        slidesPreview: [
+          'Definition of a Set and Element Membership',
+          'Common Set Operations: Union, Intersection, Difference, Complement',
+          'Cartesian Products and Power Sets',
+          'Understanding Functions: One-to-One (Injective), Onto (Surjective), and Bijection',
+          'Relations and their Properties: Reflexive, Symmetric, Transitive'
+        ],
+        practiceProblems: [
+          {
+            id: 'dm-sets-q1',
+            question: 'If set A = {1, 2, 3} and set B = {3, 4, 5}, what is A intersect B and A union B?',
+            answer: 'A intersect B = {3} and A union B = {1, 2, 3, 4, 5}.',
+            hint: 'Intersection is the common elements, and union is all unique elements combined.'
+          },
+          {
+            id: 'dm-sets-q2',
+            question: 'Let f: R -> R be defined by f(x) = 2x + 3. Is this function bijective?',
+            answer: 'Yes, it is bijective. It is injective because 2a + 3 = 2b + 3 => 2a = 2b => a = b. It is surjective because for any real number y, we can find x = (y - 3)/2 such that f(x) = y.',
+            hint: 'Check if it is injective (one-to-one) and surjective (onto).'
+          }
+        ]
+      },
+      {
+        title: 'Counting and probability',
+        videoUrl: 'https://www.youtube.com/embed/5-9dC7cZ0sE',
+        slidesUrl: '/slides/discrete-math-counting.pdf',
+        slidesPreview: [
+          'The Sum Rule and Product Rule of Counting',
+          'Permutations (Order Matters) vs. Combinations (Order Doesn\'t Matter)',
+          'The Pigeonhole Principle and its Applications',
+          'Introduction to Probability and Sample Spaces',
+          'Conditional Probability and Independent Events'
+        ],
+        practiceProblems: [
+          {
+            id: 'dm-count-q1',
+            question: 'How many different 4-digit PINs can be created if repetition of digits is allowed?',
+            answer: 'Using the product rule: 10 * 10 * 10 * 10 = 10,000 possible PINs (from 0000 to 9999).',
+            hint: 'There are 10 possible digits (0-9) for each of the 4 positions.'
+          },
+          {
+            id: 'dm-count-q2',
+            question: 'A box contains 5 red balls and 3 blue balls. If two balls are drawn at random without replacement, what is the probability that both are blue?',
+            answer: 'Probability of first blue is 3/8. Probability of second blue is 2/7. Total probability is (3/8) * (2/7) = 6/56 = 3/28 ≈ 0.107.',
+            hint: 'Multiply the probability of the first blue ball by the probability of the second blue ball, given the first was blue.'
+          }
+        ]
+      },
+      {
+        title: 'Proofs and mathematical induction',
+        videoUrl: 'https://www.youtube.com/embed/wKee41v3Jg4',
+        slidesUrl: '/slides/discrete-math-proofs.pdf',
+        slidesPreview: [
+          'Direct Proofs and Proofs by Contraposition',
+          'Proof by Contradiction: Assuming the negative and finding an absurdity',
+          'The Principle of Mathematical Induction: Base Case and Inductive Step',
+          'Strong Induction and Well-Ordering Principle',
+          'Common Pitfalls in Mathematical Proofs'
+        ],
+        practiceProblems: [
+          {
+            id: 'dm-proofs-q1',
+            question: 'Prove that if n is an odd integer, then n^2 is also odd.',
+            answer: 'Let n = 2k + 1 for some integer k. Then n^2 = (2k + 1)^2 = 4k^2 + 4k + 1 = 2(2k^2 + 2k) + 1. Since 2k^2 + 2k is an integer, say m, then n^2 = 2m + 1, which is odd by definition.',
+            hint: 'Write an odd integer n in the form 2k + 1 where k is an integer, then square it.'
+          }
+        ]
+      },
+      {
+        title: 'Graphs and trees',
+        videoUrl: 'https://www.youtube.com/embed/C7P-zHnF9Jg',
+        slidesUrl: '/slides/discrete-math-graphs.pdf',
+        slidesPreview: [
+          'Introduction to Graphs: Vertices, Edges, and Degree',
+          'Directed vs. Undirected Graphs, Weighted Graphs',
+          'Euler Paths/Circuits vs. Hamiltonian Paths/Circuits',
+          'Trees: Definitions, Rooted Trees, and Binary Trees',
+          'Spanning Trees and Algorithms (Kruskal\'s / Prim\'s)'
+        ],
+        practiceProblems: [
+          {
+            id: 'dm-graphs-q1',
+            question: 'What is the sum of the degrees of all vertices in any undirected graph?',
+            answer: 'The sum of the degrees of all vertices is equal to twice the number of edges (2|E|). This is because every edge contributes exactly 1 to the degree of its two endpoints.',
+            hint: 'Think about the Handshaking Lemma.'
+          }
+        ]
+      },
+      {
+        title: 'Boolean algebra',
+        videoUrl: 'https://www.youtube.com/embed/gHk_88B3X3E',
+        slidesUrl: '/slides/discrete-math-boolean.pdf',
+        slidesPreview: [
+          'Boolean Functions, Expressions, and Identities',
+          'Duality Principle in Boolean Algebra',
+          'Representing Boolean Functions: Sum-of-Products and Product-of-Sums',
+          'Logic Gates: AND, OR, NOT, XOR, NAND, NOR',
+          'Karnaugh Maps (K-Maps) for Minimization'
+        ],
+        practiceProblems: [
+          {
+            id: 'dm-bool-q1',
+            question: 'Simplify the Boolean expression: A * B + A * (B + C) using Boolean laws.',
+            answer: 'Distributing the second term gives: A * B + A * B + A * C. By the idempotent law, A * B + A * B = A * B. So it simplifies to A * B + A * C = A * (B + C).',
+            hint: 'Use the distributive law and absorption/idempotent laws.'
+          }
+        ]
+      }
+    ]
+  }
 ]
 
 export const upcomingClasses: UpcomingClass[] = [
@@ -807,4 +1233,3 @@ export const systemDesignNotes: SystemDesignNote[] = [
     ],
   },
 ]
-

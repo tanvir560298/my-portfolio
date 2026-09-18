@@ -76,13 +76,28 @@ export interface Testimonial {
   sourceUrl?: string
 }
 
+export interface PracticeProblem {
+  id: string
+  question: string
+  answer: string
+  hint?: string
+}
+
+export interface ModuleDetail {
+  title: string
+  videoUrl?: string
+  slidesUrl?: string
+  slidesPreview?: string[]
+  practiceProblems?: PracticeProblem[]
+}
+
 export interface Course {
   id: string
   title: string
   studentsCount: number
   lessonsCount: number
   description: string
-  modules: string[]
+  modules: ModuleDetail[]
 }
 
 export interface UpcomingClass {

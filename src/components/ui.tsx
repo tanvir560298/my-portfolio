@@ -96,17 +96,20 @@ export function ActionLink({
   children,
   variant = 'primary',
   external,
+  download,
   className,
 }: {
   href: string
   children: ReactNode
   variant?: 'primary' | 'secondary'
   external?: boolean
+  download?: boolean | string
   className?: string
 }) {
   return (
     <a
       href={href}
+      download={download}
       className={cx(
         'inline-flex min-h-11 items-center justify-center gap-2 rounded-xl px-5 py-2.5 text-sm font-bold transition focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-slate-950',
         variant === 'primary'

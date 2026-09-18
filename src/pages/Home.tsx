@@ -6,6 +6,7 @@ import {
   CheckCircle2,
   Code2,
   Download,
+  ExternalLink,
   Github,
   GraduationCap,
   Linkedin,
@@ -217,12 +218,38 @@ export function Home() {
                   </span>
                 ))}
               </div>
-              <a
-                href={`/projects/${project.slug}`}
-                className="mt-6 inline-flex items-center gap-2 font-bold text-emerald-300 hover:text-emerald-200"
-              >
-                View case study <ArrowRight size={16} />
-              </a>
+              <div className="mt-6 flex flex-wrap items-center justify-between gap-3 border-t border-white/10 pt-4">
+                <a
+                  href={`/projects/${project.slug}`}
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-300 transition hover:text-white"
+                >
+                  Case study <ArrowRight size={14} />
+                </a>
+                <div className="flex items-center gap-3">
+                  {project.repoUrl && (
+                    <a
+                      href={project.repoUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1 text-xs font-medium text-slate-400 transition hover:text-white"
+                      title="GitHub Repository"
+                    >
+                      <Github size={14} /> Code
+                    </a>
+                  )}
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1 text-xs font-bold text-emerald-400 transition hover:text-emerald-300"
+                      title="Live Demo"
+                    >
+                      Live Demo <ExternalLink size={13} />
+                    </a>
+                  )}
+                </div>
+              </div>
             </Card>
           ))}
         </div>
@@ -237,7 +264,7 @@ export function Home() {
         id="teaching"
         eyebrow="Teaching"
         title="Preparing practical web development lessons for YouTube."
-        intro="I plan to help beginners learn step by step, build practical projects, and follow a clear path from web fundamentals to full-stack React and Java/Spring Boot."
+        intro="I plan to help beginners learn step by step, build practical projects, and follow a clear path from web fundamentals to full-stack MERN development."
       >
         <RoadmapSolarSystem />
       </Section>
@@ -311,22 +338,21 @@ export function Home() {
 
       <Section
         id="resume"
-        eyebrow="Resume"
-        title="A quick overview of my background."
+        eyebrow="Resume & Credentials"
+        title="Comprehensive CV & Professional Background."
         className="bg-slate-900/35"
       >
         <Card className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
           <div>
             <h3 className="text-xl font-bold text-white">
-              Developer & aspiring educator profile
+              Tanvir Ahmad — Professional Curriculum Vitae (CV)
             </h3>
-            <p className="mt-2 text-slate-300">
-              Download the current placeholder resume, then replace it when your final details are
-              ready.
+            <p className="mt-2 text-slate-300 max-w-2xl leading-relaxed">
+              Full-Stack MERN Developer, CEO & English Instructor at Lugaish, and former District Secretary (Interact 3281). Download the complete verified PDF resume in one click.
             </p>
           </div>
-          <ActionLink href={personal.resume}>
-            <Download size={17} /> Download resume
+          <ActionLink href={personal.resume} download="Tanvir_Ahmad_CV.pdf">
+            <Download size={17} /> Download CV (PDF)
           </ActionLink>
         </Card>
       </Section>
