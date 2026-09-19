@@ -3,6 +3,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import {
   ArrowRight,
+  ArrowUpRight,
   CheckCircle2,
   Code2,
   Download,
@@ -12,6 +13,7 @@ import {
   Linkedin,
   Mail,
   MapPin,
+  Youtube,
 } from 'lucide-react'
 import { z } from 'zod'
 import {
@@ -262,10 +264,47 @@ export function Home() {
 
       <Section
         id="teaching"
-        eyebrow="Teaching"
-        title="Preparing practical web development lessons for YouTube."
-        intro="I plan to help beginners learn step by step, build practical projects, and follow a clear path from web fundamentals to full-stack MERN development."
+        eyebrow="Teaching & YouTube"
+        title="Teaching Web Development in Bangla on YouTube."
+        intro="I teach modern web development in Bangla — breaking down programming concepts from foundational HTML and responsive design to Full-Stack MERN applications."
       >
+        <div className="mb-12 rounded-3xl border border-red-500/20 bg-gradient-to-r from-red-950/20 via-slate-900 to-slate-900 p-6 shadow-2xl backdrop-blur sm:p-8">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+            <div className="max-w-2xl">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-red-500/30 bg-red-500/15 px-3 py-1 text-xs font-extrabold text-red-400">
+                  <Youtube size={14} /> Full Course in Bangla
+                </span>
+                <span className="rounded-full bg-white/5 px-2.5 py-0.5 text-xs font-semibold text-slate-300">
+                  7 Video Lessons • Beginner to Advanced
+                </span>
+              </div>
+              <h3 className="mt-4 text-2xl font-black text-white sm:text-3xl">
+                HTML Full Course in Bangla | Web Development for Beginners
+              </h3>
+              <p className="mt-2 text-sm leading-6 text-slate-300 sm:text-base">
+                Learn modern HTML from scratch in Bangla! Covers environment setup, semantic structuring, SEO headings, media, forms, lists, and building a complete portfolio website.
+              </p>
+            </div>
+            <div className="flex flex-wrap items-center gap-3 shrink-0">
+              <a
+                href={personal.youtube}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-xl bg-red-600 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-red-600/20 transition hover:bg-red-500 hover:shadow-red-600/40"
+              >
+                <Youtube size={17} /> Watch on YouTube <ArrowUpRight size={15} />
+              </a>
+              <a
+                href="/resources/html-basics"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-bold text-white transition hover:border-emerald-400/40 hover:bg-white/10"
+              >
+                Watch on Website <ArrowRight size={15} />
+              </a>
+            </div>
+          </div>
+        </div>
+
         <RoadmapSolarSystem />
       </Section>
 
@@ -297,13 +336,24 @@ export function Home() {
                 <span className="text-xs text-slate-400">{resource.status}</span>
               </div>
               <h3 className="mt-5 text-xl font-bold text-white">{resource.title}</h3>
-              <p className="mt-3 text-slate-300">{resource.description}</p>
-              <a
-                href={`/resources/${resource.slug}`}
-                className="mt-5 inline-flex items-center gap-2 font-bold text-emerald-300"
-              >
-                Read overview <ArrowRight size={16} />
-              </a>
+              <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
+                <a
+                  href={`/resources/${resource.slug}`}
+                  className="inline-flex items-center gap-1.5 text-sm font-bold text-emerald-300 hover:text-emerald-200"
+                >
+                  View course <ArrowRight size={15} />
+                </a>
+                {resource.playlistUrl && (
+                  <a
+                    href={resource.playlistUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1 text-xs font-bold text-red-400 hover:text-red-300"
+                  >
+                    <Youtube size={14} /> YouTube Playlist <ArrowUpRight size={13} />
+                  </a>
+                )}
+              </div>
             </Card>
           ))}
         </div>
@@ -398,6 +448,17 @@ export function Home() {
                 >
                   <Linkedin />
                 </a>
+                {personal.youtube && (
+                  <a
+                    href={personal.youtube}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="YouTube Channel / Playlist"
+                    className="rounded-lg border border-white/10 p-3 hover:text-red-400 transition"
+                  >
+                    <Youtube />
+                  </a>
+                )}
               </div>
             </Card>
           </div>

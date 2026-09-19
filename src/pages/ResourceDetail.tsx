@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ArrowLeft, CalendarDays, Clock3, Play, Video as VideoIcon } from 'lucide-react'
+import { ArrowLeft, ArrowUpRight, CalendarDays, Clock3, Play, Video as VideoIcon, Youtube } from 'lucide-react'
 import { Link, useParams } from 'react-router-dom'
 import { resources } from '../data/content'
 
@@ -161,6 +161,20 @@ export function ResourceDetail() {
                       )
                     })}
                   </div>
+
+                  {resource.playlistUrl && (
+                    <div className="mt-4 border-t border-slate-100 pt-4 dark:border-slate-800">
+                      <a
+                        href={resource.playlistUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex w-full items-center justify-center gap-2 rounded-2xl bg-red-600 px-4 py-3 text-xs font-bold text-white shadow transition hover:bg-red-500"
+                      >
+                        <Youtube className="h-4 w-4" /> Watch Full Playlist on YouTube{' '}
+                        <ArrowUpRight className="h-3.5 w-3.5" />
+                      </a>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

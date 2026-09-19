@@ -18,19 +18,20 @@ export const personal = {
   name: 'Tanvir Ahmad',
   initials: 'TA',
   title: 'Full-Stack MERN Developer & CEO of Lugaish',
-  eyebrow: 'MERN Stack Developer • CEO & Instructor',
+  eyebrow: 'MERN Developer • Teaching Web Dev in Bangla • CEO of Lugaish',
   pitch:
-    'I build high-performance web applications with MongoDB, Express.js, React, and Node.js, and lead Lugaish — an interactive language learning platform for students.',
-  bio: 'I am a student at the Islamic University of Madinah, an active Full-Stack MERN developer, and the CEO of Lugaish (lugaish.vercel.app), where I also serve as an English instructor. Beyond software engineering, I served as District Secretary for Interact District 3281 Bangladesh coordinating youth initiatives across 2,000+ students, graduated from the American Center\'s intensive 2-Year English & Leadership Program, represented youth as an international leadership delegate in Nepal, and completed specialized executive training in The Art of Negotiation. I merge engineering craftsmanship with strategic deal-making, cross-cultural communication, and proven team leadership.',
+    'I build high-performance web applications with MongoDB, Express.js, React, and Node.js, and actively teach web development in Bangla on YouTube.',
+  bio: 'I am a student at the Islamic University of Madinah, an active Full-Stack MERN developer, and the CEO of Lugaish (lugaish.vercel.app), where I also serve as an English instructor. Dedicated to empowering aspiring developers, I actively teach modern web development in Bangla on YouTube, breaking down frontend and backend concepts into structured, beginner-friendly courses. Beyond software engineering, I served as District Secretary for Interact District 3281 Bangladesh coordinating youth initiatives across 2,000+ students, graduated from the American Center\'s intensive 2-Year English & Leadership Program, represented youth as an international leadership delegate in Nepal, and completed specialized executive training in The Art of Negotiation.',
   location: 'Madinah, Saudi Arabia / Dhaka, Bangladesh',
   email: 'tahmadium@gmail.com',
   education: 'Islamic University of Madinah — Student',
-  experience: 'Founder & CEO, Lead Developer & English Instructor at Lugaish • Former District Secretary at Interact District 3281 Bangladesh (Led 2,000+ Students)',
+  experience: 'Founder & CEO, Lead Developer & English Instructor at Lugaish • Web Development Instructor (Bangla on YouTube) • Former District Secretary at Interact District 3281 Bangladesh (Led 2,000+ Students)',
   certifications: 'American Center 2-Year English & Leadership Program, Nepal Youth Leadership Delegate, The Art of Negotiation Program',
   availability: 'Open to suitable opportunities & collaborations',
-  languages: 'English (Proficient — Instructor), Bengali (Native), Urdu (Fluent), Hindi (Fluent), Arabic (Academic / Working)',
+  languages: 'English (Proficient — Instructor), Bengali (Native — Web Dev Teaching), Urdu (Fluent), Hindi (Fluent), Arabic (Academic / Working)',
   github: 'https://github.com/tanvir560298',
   linkedin: 'https://www.linkedin.com/in/tanvir-ahmad-701265415/',
+  youtube: 'https://youtube.com/playlist?list=PLZPdXFF1ExFQ',
   resume: '/Tanvir_Ahmad_CV.pdf',
 }
 
@@ -336,15 +337,17 @@ export const roadmap: RoadmapStage[] = [
 export const resources: Resource[] = [
   {
     slug: 'html-basics',
-    title: 'HTML Complete Crash Course',
-    description: 'Learn HTML from the very beginning to structural mastery. Follow our 7-part video series to build accessible, semantic page structures.',
-    category: 'Course',
-    readingTime: '7 Lessons',
-    publishedAt: 'Aug 17, 2026',
-    tags: ['HTML', 'Beginner', 'Frontend'],
+    title: 'HTML Full Course in Bangla | Web Development for Beginners',
+    description: 'Learn modern HTML from the ground up in Bangla! A comprehensive 7-part video series covering document structure, text formatting, SEO headings, media, forms, lists, and building a live portfolio website.',
+    category: 'Video Course',
+    readingTime: '7 Video Lessons • Bangla',
+    publishedAt: 'Active on YouTube',
+    tags: ['HTML5', 'Bangla', 'Beginner', 'Frontend', 'YouTube'],
+    playlistUrl: 'https://youtube.com/playlist?list=PLZPdXFF1ExFQ',
     content: [
-      'Welcome to the HTML complete crash course! In this comprehensive, structured video series, we will cover HTML from start to finish. This is the exact plan we developed to help you build a solid foundation in frontend web development.',
-      'Below you will find the 7 video lessons that cover everything from document layout, structure, formatting, lists, tables, links, to images, media, semantic structures, and forms.',
+      'Welcome to the HTML Full Course in Bangla! In this comprehensive, structured video series, I teach HTML from the ground up in clear, intuitive Bangla to help you start your web development journey with solid foundations.',
+      'Across these 7 lessons, we cover everything: environment setup, text formatting, heading hierarchy, images & hyperlinking, forms, lists, document anatomy, and building a real portfolio website project from scratch.',
+      'Watch each lesson directly on this page with topic breakdowns or open the complete playlist on YouTube.',
     ],
     featured: true,
     status: 'Published',
@@ -497,8 +500,8 @@ export const timeline: TimelineEntry[] = [
 export const testimonials: Testimonial[] = []
 
 export const seo = {
-  title: `${personal.name} — MERN Stack Developer & CEO of Lugaish`,
-  description: 'Portfolio of Tanvir Ahmad — Full-Stack MERN Developer and CEO of Lugaish, a language learning platform for students.',
+  title: `${personal.name} — Full-Stack MERN Developer, Educator & CEO of Lugaish`,
+  description: 'Portfolio of Tanvir Ahmad — Full-Stack MERN Developer, CEO of Lugaish, and Web Development Instructor teaching HTML, React, and MERN in Bangla on YouTube.',
 }
 
 export const courses: Course[] = [

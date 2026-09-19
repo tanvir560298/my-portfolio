@@ -42,6 +42,7 @@ export interface Resource {
   featured: boolean
   status: 'Planned Content' | 'Published'
   videos?: Video[]
+  playlistUrl?: string
 }
 
 
